@@ -1,0 +1,1960 @@
+2024-08-10 16:14:40,600 - __main__ - INFO - Webhook ID: 2983076408, Trigger: FILE.UPLOADED, Source ID: 1614233886257, Source Type: file
+2024-08-10 16:14:40,600 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJGNm5OU0xmeDNGcjZNUzBYRlcwMDZ0ZFBQanJUVG0wMEdhRW1XUmNKTHdlM1FRa0l4d2FaMTUyaVZIQkJwQkN0Skxramp4QU50QW5HdEtkbnhGSzdqY2JLcnIwazJ1UVJiRk83bDl2a3E2cmtnRDZNIiwiZXhwIjoxNzIzMzI0NTEwfQ.Dj1mfaxT8Yc2lsOeRqEibQwkm6-x7YVzxFsHxGy2Uj7IkNgbXw9qfNXTXWMWRzLF2F06VamgBbnYNbBWWFBzaPc1ushNqiRXyCjJLY8u6rPEbQ5eAR0RI6SV03s9DBpoKqxlXUFeJX2KU9AD8jaB0rXjWc2TXBOYXn93cl-WejGae3hLqsURRfbvF1MwL5m8rf-L5zJMcpb8SRzTV5Qju2B6aPOzO3xEsbM9TL4O0QT8dMIWp2zu7WOsbkE2_O0xwpe0OQN-VGCXan-FPYeEPajQxIWYmRu4TgQSKhh6PTgxcqBUrTBb2nAKtICIQ0Qwk9b1lLkVY5W3TpQwSySKtQ',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 16:14:41,061 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sat, 10 Aug 2024 21:14:42 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b7d842b642d1.14504284; expires=Sun, 10-Aug-2025 21:14:42 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sat, 17-Aug-2024 21:14:42 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=12; expires=Sun, 10-Aug-2025 21:14:42 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---Qg..',
+ 'expires_in': 3933,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 16:14:41,061 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---Qg..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.enterprise.myMetadata'}}[0m
+2024-08-10 16:14:41,469 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.enterprise.myMetadata" 200 91
+{'date': 'Sat, 10 Aug 2024 21:14:43 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '159', 'etag': '"0"', 'box-request-id': '01c6059868afea09c257f5aeef2286c5c', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': None,
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-10 16:14:41,469 - __main__ - ERROR - Error handling FILE.UPLOADED webhook: 'NoneType' object has no attribute 'get'
+2024-08-10 16:31:40,180 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-10 16:31:40,180 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-10 16:31:40,180 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJLM2N1aEIzdUUzd0NsbUx5d3p3N0F3Z3Q4UiIsImV4cCI6MTcyMzMyNTUzMH0.JLtaNVHQs3TKX6zwIS2PtC-3EqPknE7XFSuzlp73FrQgqvDnAgcMJwWcIVRE64j2AOXavY94DPN7EN2njPlU_Nq3xnBPIEx8e69bqpx3B-V4cMg7EwA1tLZ1HTuhVoF5eOBXC_N5at0ijLozJK4r6VmRcC2LT1UvlTahawuCRozesRkxqvBJK28t--WhhevBQSN1qWMn1mLE12Z7mSmddImxMiQ39Tr5ZQ3v-Ug4sSST_ZSXxWgoLFnGSp5i1VEGzVMzYcH6ZI_aQsUrHHlZnXek-mWx4xN5hBIS4g4Z1L9-juBM1BzYgMEHFqJoICIjqP0wOPWeIjt1RFc8wZtO4Q',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 16:31:40,636 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sat, 10 Aug 2024 21:31:42 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b7dc3e521475.15698309; expires=Sun, 10-Aug-2025 21:31:42 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sat, 17-Aug-2024 21:31:42 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=76; expires=Sun, 10-Aug-2025 21:31:42 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---ZQ..',
+ 'expires_in': 3643,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 16:31:40,648 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---ZQ..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-10 16:31:40,989 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Sat, 10 Aug 2024 21:31:42 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '140', 'etag': '"0"', 'box-request-id': '01ec2e425c9a795065374a6be44afaec8', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-10 16:31:40,989 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-10 16:31:40,989 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257/metadata/enterprise/myMetadata {'headers': {'Authorization': '---ZQ..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'}}[0m
+2024-08-10 16:31:41,198 - boxsdk.network.default_network - WARNING - [31m"GET https://api.box.com/2.0/files/1614233886257/metadata/enterprise/myMetadata" 404 103
+{'date': 'Sat, 10 Aug 2024 21:31:43 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '111', 'strict-transport-security': 'max-age=31536000', 'box-request-id': '1fca3a5d8d69fba8f75387b0aadc54da5', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'code': '---ound',
+ 'message': 'Specified Metadata Template not found.',
+ 'request_id': 'h341mohsjhorjkb5'}
+[0m
+2024-08-10 16:31:41,199 - __main__ - ERROR - Error fetching metadata: Message: Specified Metadata Template not found.
+Status: 404
+Code: not_found
+Request ID: h341mohsjhorjkb5
+Headers: {'date': 'Sat, 10 Aug 2024 21:31:43 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '111', 'strict-transport-security': 'max-age=31536000', 'box-request-id': '1fca3a5d8d69fba8f75387b0aadc54da5', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+URL: https://api.box.com/2.0/files/1614233886257/metadata/enterprise/myMetadata
+Method: GET
+Context Info: None
+2024-08-10 17:29:32,436 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-10 17:29:32,436 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-10 17:29:32,436 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJER2lwaHBWQUh1WXYzZVl5d0VYZHA2T2FEUjR1cmN4TEo3YngzMUhxcGlvanRQTzl5YThoVVhQdDIyeDhVbDVGOG1FSzB4cnV2RmdnaE41eEtXUFoxRU8iLCJleHAiOjE3MjMzMjkwMDJ9.oBNp2XMAtc2H0zYmknDpa0R3vCf4l6aVFat7dyUQqkPOYiHIMKhWqngw6bZb8BNdKoaE-JV8wbpYgBteTtGcpjQcDTExGsetPFit61fFIsDzm5PX48cmg70vI_QjwmwGh2VKkWZLAjWd50zAq_1yLFu2-xH4BTASIr8wJ1ADPOOMNxvXW1MYFaaG3GCIatfsG1LSI1-PJKO0iCeopSvSWDKZ4YphBwKMen6Qs3XRjkhendTjUevkelhoB2gQu0PVDD0te_idzbHVf2UKw7xf-n06eB5eyhHnQXOfOnn-kfrdOiPf-KQb3DS1wz1NHqxb3_mVYa1uoaGkpIWfyOImGw',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 17:29:33,203 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sat, 10 Aug 2024 22:29:35 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b7e9ce9da877.34436736; expires=Sun, 10-Aug-2025 22:29:34 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sat, 17-Aug-2024 22:29:34 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=41; expires=Sun, 10-Aug-2025 22:29:34 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---ng..',
+ 'expires_in': 4089,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 17:29:33,203 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---ng..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-10 17:29:33,597 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Sat, 10 Aug 2024 22:29:35 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '146', 'etag': '"0"', 'box-request-id': '0d35a4e2544845ebd6e5dc2de0f229838', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-10 17:29:33,623 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-10 17:29:33,630 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257/metadata/global/properties {'headers': {'Authorization': '---ng..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'}}[0m
+2024-08-10 17:29:33,917 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257/metadata/global/properties" 200 187
+{'date': 'Sat, 10 Aug 2024 22:29:35 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '173', 'strict-transport-security': 'max-age=31536000', 'box-request-id': '0b39ab0d1d449d55893fc1015fbb0acc9', 'cache-control': 'no-cache, no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'$canEdit': True,
+ '$id': 'eb316fa2-c37a-4b61-a691-b994faa5ac81',
+ '$parent': 'file_1614233886257',
+ '$scope': 'global',
+ '$template': 'properties',
+ '$type': 'properties',
+ '$typeVersion': 6,
+ '$version': 0}
+[0m
+2024-08-10 17:29:33,920 - __main__ - INFO - Got all metadata instances for file: {'$id': 'eb316fa2-c37a-4b61-a691-b994faa5ac81', '$version': 0, '$type': 'properties', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'properties', '$scope': 'global', '$canEdit': True}
+2024-08-10 17:29:33,920 - __main__ - INFO - All Metadata: {'$id': 'eb316fa2-c37a-4b61-a691-b994faa5ac81', '$version': 0, '$type': 'properties', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'properties', '$scope': 'global', '$canEdit': True}
+2024-08-10 17:29:33,920 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257/metadata/enterprise/myMetadata {'headers': {'Authorization': '---ng..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'}}[0m
+2024-08-10 17:29:34,226 - boxsdk.network.default_network - WARNING - [31m"GET https://api.box.com/2.0/files/1614233886257/metadata/enterprise/myMetadata" 404 103
+{'date': 'Sat, 10 Aug 2024 22:29:36 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '123', 'strict-transport-security': 'max-age=31536000', 'box-request-id': '0cf7476921dd3de6ff18f6b70f9decdd3', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'code': '---ound',
+ 'message': 'Specified Metadata Template not found.',
+ 'request_id': 'x6y8j0hsjjczokmd'}
+[0m
+2024-08-10 17:29:34,226 - __main__ - ERROR - Error fetching metadata instance: Message: Specified Metadata Template not found.
+Status: 404
+Code: not_found
+Request ID: x6y8j0hsjjczokmd
+Headers: {'date': 'Sat, 10 Aug 2024 22:29:36 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '123', 'strict-transport-security': 'max-age=31536000', 'box-request-id': '0cf7476921dd3de6ff18f6b70f9decdd3', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+URL: https://api.box.com/2.0/files/1614233886257/metadata/enterprise/myMetadata
+Method: GET
+Context Info: None
+2024-08-10 17:46:19,804 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-10 17:46:19,804 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-10 17:46:19,804 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJTeENSVEs5WWZDZ1ZoSlhVMGJ4NWdjMzJWQXREdHdueThVODZNZTc4TDJ6cVZKYmJVZlJhaGRnMUJSbVkzdkx0QzRVWEhUMHVyVmU3anlrc2VrdDZOcFFwRVhjVmtUNXo4MkhqeEVHV3pUOUtaNTByaFVrMFlIU3oiLCJleHAiOjE3MjMzMzAwMDl9.YCVusfpXPdx52AqS70sqnn28LCDxJ2M5iqj_p6Rne8gL10SPmvUbwnBBuVQv2c1GEkvJugfbuaJkSfxTWTLR5XPJzf9ZFTs7zKhDos3pppuAznWWJJCwznWjS9ftQK5zviT3sZ2kBE314tNa-QXdKkE7H-X85ejc1xEYI3zgHZg129GAsVRo58-4nRhdgM1ligxR5g_viQgo_oqLaj8MJGF6zYJm0WINxU31QhDVuso2QVoJpxpAGwS7fv0u3bZJWnnsKE_tPiQr3YZB-A0rDChpOY2mORHSHDT_fRIGJCVmitJa-2f_6NpNidG6IVnnm7ZpmY1bxcIVmP4Gvnl6pA',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 17:46:20,292 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sat, 10 Aug 2024 22:46:22 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b7edbe095312.72205946; expires=Sun, 10-Aug-2025 22:46:22 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sat, 17-Aug-2024 22:46:22 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=86; expires=Sun, 10-Aug-2025 22:46:22 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---Qw..',
+ 'expires_in': 3955,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 17:46:20,292 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---Qw..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-10 17:46:20,631 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Sat, 10 Aug 2024 22:46:22 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '157', 'etag': '"0"', 'box-request-id': '0d8d38ec60f6235e2d8760c75d9369196', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-10 17:46:20,635 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-10 17:46:20,635 - __main__ - ERROR - Error fetching metadata: 'Client' object has no attribute 'file_metadata'
+2024-08-10 18:00:55,305 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-10 18:00:55,308 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-10 18:00:55,308 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJxSWFUOUpiUDBodDNNbWIwNHdtVGVqOXFFeDUzNTRHTjdIbVZkR05nIiwiZXhwIjoxNzIzMzMwODg1fQ.jJV9xJNUgf79P-iReCHu8-rNp8RXj2K_n6xM72G0Z2GBLGM0AXUXcYnsyj9bnotsnR9FvyB0YKHmd9rt9tW1a_al2sfTq0xdViwZtyUMNkK1xuXmBhjuFRahifzbOqbSH_ue6t-ZQXBsgFFkQrsQmRjFMmI86oWP22I450f0d5rBBwSpDyVUM1cAtqsUvs38XH5ABAXAuCn0c2J4BDObaVGtZC_sSsNIANyOBqc8Fk12MvFzloCf2EwqncHJGXL-OM_vRdDD6tqch2Bc1wp1bionNJ1EnTHVmoxjrztR5tQwv30pbxXArtvrB0n0zmXrIgz8tCZxdewMQjqdLGs36Q',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 18:00:55,731 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sat, 10 Aug 2024 23:00:57 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b7f129885782.26162592; expires=Sun, 10-Aug-2025 23:00:57 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sat, 17-Aug-2024 23:00:57 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=1; expires=Sun, 10-Aug-2025 23:00:57 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---1w..',
+ 'expires_in': 4213,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 18:00:55,731 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---1w..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-10 18:00:56,065 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Sat, 10 Aug 2024 23:00:58 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '154', 'etag': '"0"', 'box-request-id': '06ceffe03448c9acd7a8972e741e192aa', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-10 18:00:56,074 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-10 18:00:56,074 - __main__ - ERROR - Error fetching metadata: 'Client' object has no attribute 'files'
+2024-08-10 18:04:50,055 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-10 18:04:50,055 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-10 18:04:50,062 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJuT29hMHJGSGM4RUljZU1GSk54cEFueHhOOW56a1RZV3hvTzN6T2Raa1ZrYm1CUldHVlFKcTJXanIxVUNNa2NJTXVqcVZXNnEydHpBYVpacVRBWlBjdVhVIiwiZXhwIjoxNzIzMzMxMTIwfQ.a-Z0Q4-Y-nPtAsT26K5U3saVuEW3XuULPPJJxFAa5XUJ8USD-NVWlhJ48pLBNQhhwAjAux8kZukI2ZdkAaWharGmYANahN5eldurUki7eVvDf7EQyPymXqCF7kV2D_bBsczXb_7HXdbCnZ8G4MRIReNm84DYJ7F-8ogHZkHRBwjGqg035IvWD4TNw0lNm8iZmw721l1T87by51RSMf0KM14HBim4rnC89ctkFgD6nGEz1WJo11a7912QkyryNv5Am3VY3ZeUfzeTjwpUGyqwW6c_dOnyhXQ-L7CHyqh9j_SMXW-HX5BGT_4bF0OU1dp4MpDtex_NK3naCBh2TppVyg',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 18:04:50,496 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sat, 10 Aug 2024 23:04:52 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b7f2144b7b44.68036690; expires=Sun, 10-Aug-2025 23:04:52 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sat, 17-Aug-2024 23:04:52 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=80; expires=Sun, 10-Aug-2025 23:04:52 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---1Q..',
+ 'expires_in': 3707,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 18:04:50,505 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---1Q..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-10 18:04:50,911 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Sat, 10 Aug 2024 23:04:52 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '160', 'etag': '"0"', 'box-request-id': '0d272f0c440e697289eabcbe8a6753382', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-10 18:04:50,911 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-10 18:04:50,911 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---1Q..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata'}}[0m
+2024-08-10 18:04:51,141 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata" 200 75
+{'date': 'Sat, 10 Aug 2024 23:04:53 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '90', 'etag': '"0"', 'box-request-id': '019d7437f3e09d3a55142d880da12808a', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-10 18:04:51,142 - __main__ - ERROR - Error fetching metadata: 'function' object has no attribute 'get'
+2024-08-10 18:06:16,998 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-10 18:06:16,999 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-10 18:06:16,999 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJlYlZvaFhWaEpWcHBuUmIyaTBZSHNzSWRjWlIxaGw1YWZianYwQTJZYktUUjl3UHJ3OExXa1JlRzRvQUlYNG9MeENSZldKWFIxMkJBWWpOa25FTGtIRkI5anJzYkdmIiwiZXhwIjoxNzIzMzMxMjA2fQ.hIKHvP_jWp4HVSuLAa6y6VxAiM-mQG1YL9tRp4GGu1yk5HpbITN_QRMCctuc2vXCkvTv-msy7Lqe3-7baJ5nGw9q1UCRrxeellLVZvNCBsY5Qj259gTqlOgudQn_wiiiFkp8xg2f83e8Z4td8H-3a_kgCfSzMgda5MHTh3YNtOAGH22HF-ep-L9I14S1NOO2g683lF_Y1mrv30W054DlhY2vmrE9xRJ4Bjfat71wSCVZ_rYDji-5p5fAOBx8bLeL-YAtsxoK8W5NOYiqM3DVDUtEaoe8KhCG-e1FbohwZCpFD87s6MPnRBbd6S87ulIOZrnF22X6DrDca86m7-MPyg',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 18:06:17,395 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sat, 10 Aug 2024 23:06:19 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b7f26b3e2b04.40605960; expires=Sun, 10-Aug-2025 23:06:19 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sat, 17-Aug-2024 23:06:19 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=34; expires=Sun, 10-Aug-2025 23:06:19 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---yA..',
+ 'expires_in': 3612,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 18:06:17,395 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---yA..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-10 18:06:17,746 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Sat, 10 Aug 2024 23:06:19 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '147', 'etag': '"0"', 'box-request-id': '05a9147df50ffcfaed39ba248a7d9696a', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-10 18:06:17,746 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-10 18:06:17,746 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---yA..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata'}}[0m
+2024-08-10 18:06:18,048 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata" 200 75
+{'date': 'Sat, 10 Aug 2024 23:06:19 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '105', 'etag': '"0"', 'box-request-id': '0789013fef60e50b4d4aba6ac2337226e', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-10 18:06:18,054 - __main__ - ERROR - Error fetching metadata: 'function' object has no attribute 'get' - Check if the 'metadata' field is correctly set.
+2024-08-10 18:08:16,972 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-10 18:08:16,980 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-10 18:08:16,980 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJRWW1sNGRTOFpsR01FTU1DYUEyVm1rUloyZWgxN2FrY1NYTGR3elhUdUN0Q1lQSiIsImV4cCI6MTcyMzMzMTMyNn0.Us4gLObP-UYuyim9IQ4zoAAwXAlmmV9MuLlqNW3zb4LMpRSq5aYkYJd_6M4FLoXY8OO24_IWM40lbRDtlPVVN5E_avG5SNlX6sUgYDZ7GXgCxaQjOBmhPiE2iSH92FC7qx2z4ZXniaDkke0O82VnKXgXpgaccPAvkRjUS3AM36M65PFsemwYmKeHLJODSD3piu6ACpXLcBKC82U3ZSg4pjcrGeuVUZcdRfeI2Z6nDwIbjdMD4WazikhIjl6S7W38cc8srngJwXwx1QaoBaZdtQ_7Er6YjJQbdVoHXLRqh2bFVDMMEJ2nIDWlKTNfs-NbvDRunb789_NdOs3G-FKaUA',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 18:08:17,451 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sat, 10 Aug 2024 23:08:19 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b7f2e338f332.29109498; expires=Sun, 10-Aug-2025 23:08:19 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sat, 17-Aug-2024 23:08:19 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=92; expires=Sun, 10-Aug-2025 23:08:19 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---0w..',
+ 'expires_in': 4163,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 18:08:17,459 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---0w..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-10 18:08:17,858 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Sat, 10 Aug 2024 23:08:19 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '142', 'etag': '"0"', 'box-request-id': '09ca753d70671d627552ec13538e9e638', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-10 18:08:17,867 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-10 18:08:17,868 - __main__ - ERROR - Error fetching metadata: 'Client' object has no attribute 'file_metadata'
+2024-08-10 22:27:10,962 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-10 22:27:10,967 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-10 22:27:10,967 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJsOVMyT0RUZDdJMmtEQXVUVzVIa1kxSmdqZmxJcnNXYlBwYjhLUnc3QllzOHJ5NGQ4Yng0ejgxaDBnU3RwckJ0b1BYTU1MM3BYMGxvc3A5S2EwWUN2UjY3clIiLCJleHAiOjE3MjMzNDY4NjB9.iSr6Tccx_W3ZF6PSIYTVm_-OUzHZk1sO9sgBLEZpXy5lN2nMtZeYHG30ocubVrCHhErMn2rSh7Y2RHb7IPYh7dn-PtyFnsZefflS5OV8gMHGGbIDhYrTA_i7o71TxdcGZ4vgdkC6iLkGg8GnOzJbBKliowqiPToQ85JwCQcof4fcv3ZimTYWANiVsCXGZiBIFekoiw7DeKAhhwLWmgjimfbklG2dk3PtKtIYU7OzfUXvioRK6SGE6ADHrcdFr4rJvMaAbp33GM1yp1DPAiMHRNRpULooQiapx2h5efaBZX6H76V40O8tXUvXuMNl8SDnGrVE9ZyZT6AiXw06gj-uUA',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 22:27:11,451 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sun, 11 Aug 2024 03:27:13 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b82f91739787.94739248; expires=Mon, 11-Aug-2025 03:27:13 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sun, 18-Aug-2024 03:27:13 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=0; expires=Mon, 11-Aug-2025 03:27:13 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---uA..',
+ 'expires_in': 4102,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 22:27:11,451 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---uA..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-10 22:27:11,765 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Sun, 11 Aug 2024 03:27:13 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '139', 'etag': '"0"', 'box-request-id': '0f2ddd5f8bd5daa4b841b3bd7ce4a0639', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-10 22:27:11,774 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-10 22:27:11,774 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---uA..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-10 22:27:12,051 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Sun, 11 Aug 2024 03:27:14 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '179', 'etag': '"0"', 'box-request-id': '0e1729b82eaaf4befb6714a490f8ed50b', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-10 22:27:12,051 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-10 22:27:12,051 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-10 22:53:44,771 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-10 22:53:44,771 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-10 22:53:44,771 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJDRFVXRU9oTXBjeEtsUVVIUm9wQUpZUmV6OUR6WWdFOWFjbVpNUXhSSEg3akRIYmFjOFlqMzc1Y0ZnTDlxNGl4TG5LZzJnZnJMU1EiLCJleHAiOjE3MjMzNDg0NTR9.d-tkvzWxS7r1NA7L9RYHurHgcC44AFUOMScI0QALdvTty6YueyZ0mV71jJ7eAFelpo9AGqemBtmWLhLrVSNQPgSIh60roWNHApfxNlKu4jsV_8SmDaspBsdPTOk6koSr3XGCgBwpHbbzCkiZj2Q4H2J2aBYbvLhRtZXMnj-ASPGZ8k_vn6qDuShOlnYxHo__a_G8E0wgluuI17VTbKpo1KcM8K3fOG9tAWKwq7hogGR_i8zm6sM5O9mMeVmtGwftAGDW-aWO1cUiZ6j8Q6jPSU_rUtyJ-LqzjQjA61coNZ1rMtZN7nYNIzjuQnOYQ-kMrvmj2W0sNsZlo5b_jacRFA',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 22:53:45,194 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sun, 11 Aug 2024 03:53:47 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b835cb3b7d60.71890561; expires=Mon, 11-Aug-2025 03:53:47 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sun, 18-Aug-2024 03:53:47 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=27; expires=Mon, 11-Aug-2025 03:53:47 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---RQ..',
+ 'expires_in': 3834,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 22:53:45,194 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---RQ..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-10 22:53:45,516 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Sun, 11 Aug 2024 03:53:47 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '150', 'etag': '"0"', 'box-request-id': '034a71de32fba9c43c0429bf4a5fd4c82', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-10 22:53:45,525 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-10 22:53:45,527 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---RQ..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-10 22:53:45,902 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Sun, 11 Aug 2024 03:53:48 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '187', 'etag': '"0"', 'box-request-id': '0f42ddf7466425c0135de78dbfe29c3da', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-10 22:53:45,909 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-10 22:53:45,910 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-10 22:53:45,910 - __main__ - INFO - Latitude: 43.06213333333334, Longitude: 89.51378666666666
+2024-08-10 22:58:41,632 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-10 22:58:41,632 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-10 22:58:41,632 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJhYTcxdDhPY3NYRzJHVENzdmVLWWd6MmJjWWIxV2h6IiwiZXhwIjoxNzIzMzQ4NzUxfQ.XGSoJlcUxHAlnKLvJyRFViAbxkbkyqiaE_J2lAjBREZU98BDNCnJN0m8XoucIP1ThmIssDF1bSVHyHEl2mBl3y7J48oPG6YnAnWwZO3c7F1JDnUk6scpWtq9f26LcXEPlatgtDko6jVcOL7SEiekU2OtmgpgM_3Vv8ilG_YQgEscb8T6SB3K52eq6J3hvLBFhfXSJPszDE2V2eoM5D2TtxcAj7YEtmgI5rYmv1n6WEf9z8mRqHiQGmbPXbH1L8YIvviEJAOclWoypsisJl1i5xuDMYrMmYa2-QD0TYl5i2D2stDSC23QKnRH4o6sysWFnUwp8EPpiromonWPFeNvJA',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 22:58:42,246 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sun, 11 Aug 2024 03:58:44 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b836f41a44a0.42660005; expires=Mon, 11-Aug-2025 03:58:44 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sun, 18-Aug-2024 03:58:44 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=96; expires=Mon, 11-Aug-2025 03:58:44 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---0g..',
+ 'expires_in': 3945,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 22:58:42,246 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---0g..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-10 22:58:42,655 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Sun, 11 Aug 2024 03:58:44 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '155', 'etag': '"0"', 'box-request-id': '03a8d35e25c2b3add10b52710791a2974', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-10 22:58:42,667 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-10 22:58:42,667 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---0g..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-10 22:58:42,964 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Sun, 11 Aug 2024 03:58:45 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '169', 'etag': '"0"', 'box-request-id': '091a4fda72352fc11b5e67f40dd042905', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-10 22:58:42,967 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-10 22:58:42,967 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-10 22:58:42,967 - __main__ - INFO - Latitude: 43.06213333333334, Longitude: 89.51378666666666
+2024-08-10 23:05:24,692 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-10 23:05:24,697 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-10 23:05:24,698 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJDcm9HUlRyZ01ldVI0WjllZWkyQ1YiLCJleHAiOjE3MjMzNDkxNTR9.k5bIPHXqgJZN_-z7KEjQkgfje6GbN16S0eCYPjro603ZaTYbm_IsLbUXdyL1faZ5g2gWQoYuiHP4ek2tQvn_AaNQpE5GQv1vbTXS93w36H7W_7vV-WbtE43lBBUe_Pa-9tjqviQYgCy9zIFUN0Gomv4YEPd6lfn7zJjxfBAuESucMGQnzE70D20fNGWRpK0iDKkDCjabVk7xCTRJ6YHgGO05g-oGE3MKnLm10aMUmzHHY4IGph0WmMIikyQXtH30Pyzn1SZyuzWhWof8zIHAoS2Droj4EJCYktojP3qiH-9DjoavQ4CfyoR6hgzzIfFpiqPNXpum7n6HbJvqt3xQRA',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-10 23:05:25,291 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Sun, 11 Aug 2024 04:05:27 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b838872b2550.32173923; expires=Mon, 11-Aug-2025 04:05:27 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Sun, 18-Aug-2024 04:05:27 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=78; expires=Mon, 11-Aug-2025 04:05:27 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---8A..',
+ 'expires_in': 3771,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-10 23:05:25,291 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---8A..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-10 23:05:25,701 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Sun, 11 Aug 2024 04:05:27 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '135', 'etag': '"0"', 'box-request-id': '06bbbe0ba79ecb4702bad694df597d4c5', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-10 23:05:25,713 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-10 23:05:25,713 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---8A..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-10 23:05:26,004 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Sun, 11 Aug 2024 04:05:28 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '195', 'etag': '"0"', 'box-request-id': '05bb91613c76d01e5fa2d4fccc4c2ae84', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-10 23:05:26,012 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-10 23:05:26,012 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-10 23:05:26,020 - __main__ - INFO - Converted coordinates: x=-9964629.150711054, y=5321433.960770792
+2024-08-11 21:38:40,388 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-11 21:38:40,388 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-11 21:38:40,388 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJ6c0pOSWpwTjgwQmVpYnlBMlY0UkJsNm5VT1RmQWRTWEo2THQiLCJleHAiOjE3MjM0MzAzNTB9.BcbRYOeBVBUhbbRRQTSClWLCDt2EXyKXdDGrWv4jBehaA6fYh8_-OfvSNRFq2VLnSHMZxMf7bKecZ-t6n1bheQYCmwKFS-9KRSsf0Ta_taKgsURpECL0qWcBSw00xq9GZK0-pUqLRSnU2eIU_hi28UlnApOSJuQtza0xZSc-k7c7YM3cZlgMu6rFeueMAS3Z_2j33wWClIeA7BwQAdaoJBNMjTr9SPmcMzL_lGurgfnyIZc_OdqgTarIpwYcIKhqn2BETzlgcBLQr-ihHLMmgTsjc2ARboFrOh3mEhtHQ9ahYus2nGtXeDU0FJuv8Xv9kGsO4GC-NXCs23OGTCR8HQ',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-11 21:38:40,919 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Mon, 12 Aug 2024 02:38:40 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b975b0a007d4.14855221; expires=Tue, 12-Aug-2025 02:38:40 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Mon, 19-Aug-2024 02:38:40 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=26; expires=Tue, 12-Aug-2025 02:38:40 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---vw..',
+ 'expires_in': 3986,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-11 21:38:40,934 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---vw..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-11 21:38:41,340 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Mon, 12 Aug 2024 02:38:41 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '157', 'etag': '"0"', 'box-request-id': '01d135271135ac00538d139f4ad8ae3c7', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-11 21:38:41,352 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-11 21:38:41,352 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---vw..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-11 21:38:41,635 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Mon, 12 Aug 2024 02:38:41 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '181', 'etag': '"0"', 'box-request-id': '1a9f3f6c5c68e674e097e9e3d84966ca1', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-11 21:38:41,645 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-11 21:38:41,645 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-11 21:38:41,645 - __main__ - INFO - Coordinates: x=-9964629.150711054, y=5321433.960770792
+2024-08-11 21:47:38,818 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-11 21:47:38,818 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-11 21:47:38,826 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJLREphNzFVWjFXVlZoajBzcVdQR0hwQ245dW1uVHF0IiwiZXhwIjoxNzIzNDMwODg4fQ.t0UcpDuvudoz8rc5FXJUI8EdVyj5d05TB0tJFb8mpgGY7oofUUJcSwiGLfr7WFLn6aGV9nMEVr-G92B1UAdQMkwAQfj-QG_7Gp3YgTEPgncdqa7iNyxE6NtQvbW0cq134gbxZDr89Rjh7kUzweXj2snAAlsgIsqerQ1ubsY_Cfpnuq2hhyH6EdCWAcparIg8a0mlbubxf18gNq2Kc4IKCM1JW8YTanSUG8B1JZGPddSF5-yY1OK10eoVKBq1OeW0ZQ2mx-GDOt3jOh6pFQE3UQ7BvpaiC6MHat5TFcpjyjhla01p3amYrTk693r0YNm77Tr7NTD54QQD5jJazVHO-A',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-11 21:47:39,343 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Mon, 12 Aug 2024 02:47:39 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b977cb14cc17.22373805; expires=Tue, 12-Aug-2025 02:47:39 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Mon, 19-Aug-2024 02:47:39 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=92; expires=Tue, 12-Aug-2025 02:47:39 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---ow..',
+ 'expires_in': 3617,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-11 21:47:39,343 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---ow..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-11 21:47:39,749 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Mon, 12 Aug 2024 02:47:39 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '139', 'etag': '"0"', 'box-request-id': '0243a82dfecb315c43af43f7012383919', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-11 21:47:39,766 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-11 21:47:39,770 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---ow..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-11 21:47:40,068 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Mon, 12 Aug 2024 02:47:40 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '200', 'etag': '"0"', 'box-request-id': '07dbdfba3e4b21174e389522783b72ce', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-11 21:47:40,077 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-11 21:47:40,078 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-11 21:47:40,078 - __main__ - INFO - Coordinates: x=-9964629.150711054, y=5321433.960770792
+2024-08-11 21:47:40,080 - __main__ - ERROR - Error adding feature to ArcGIS: name 'json' is not defined
+2024-08-11 21:48:47,436 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-11 21:48:47,439 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-11 21:48:47,441 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJrNFM0bzBldXVNY3ZSSWlCUVRSRVZNTXcxaE9ucVg0VTYiLCJleHAiOjE3MjM0MzA5NTd9.aMo3pZf_RTO8PVd06OVv10EZxryksLa413qUSI-wPgdKS7WpOx79pzyrdur90zmBpxtoagDmallK-SXL8BQeYr0NDf7VkSG-QQFR0N5NhqcLI30m3b2i2JMNv0pbKTbxGoz925YuOMYsuVWq7sTbAgUuB_KFp9gC31Lg6bHTrRu3qTj5It6h4QeMCN2hjaxOa_EEO1ANiEeqasRWAXzfkZUk53oK5C-dA_pW-XhseuRDaD17kcPG8jghm8R3iYPeZR5Qe64N0ZGjXVFCE9gfnloJFq6huLRePrgsH65G4fPQ1FCtsCa-GqjMw7FMF--Ja1lVn6yEN1yaQ66v7wjmwQ',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-11 21:48:47,889 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Mon, 12 Aug 2024 02:48:47 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66b9780fae3be7.16361801; expires=Tue, 12-Aug-2025 02:48:47 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Mon, 19-Aug-2024 02:48:47 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=98; expires=Tue, 12-Aug-2025 02:48:47 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---Ow..',
+ 'expires_in': 3974,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-11 21:48:47,898 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---Ow..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-11 21:48:48,233 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Mon, 12 Aug 2024 02:48:48 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '151', 'etag': '"0"', 'box-request-id': '0bf62886b09c121053f142defa1f1301b', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-11 21:48:48,245 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-11 21:48:48,245 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---Ow..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-11 21:48:48,508 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Mon, 12 Aug 2024 02:48:48 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '157', 'etag': '"0"', 'box-request-id': '0ad36d3d7390cb5a00240c531f153b7a4', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-11 21:48:48,511 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-11 21:48:48,511 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-11 21:48:48,511 - __main__ - INFO - Coordinates: x=-9964629.150711054, y=5321433.960770792
+2024-08-11 21:48:49,055 - __main__ - ERROR - Error adding feature to ArcGIS: Request URL is missing an 'http://' or 'https://' protocol.
+2024-08-12 11:43:19,645 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-12 11:43:19,645 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-12 11:43:19,645 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJOYVJKQWQwNDJ3UjVheUlEWjRSZFFVSVpVTER6d1hDWFZWVVhVbGU5MWd0OEVtOUNCUENmUGFtMTZmS240TTFuMmF1YVFIaUtxdW9JV0N3QnVQUyIsImV4cCI6MTcyMzQ4MTAyOX0.SrNR797D0F86z4kvnDHvMtyECARImYJefbptyNlYAm7U-qYbCX6Yiq4kdRS-fUNFfTxrIhBEeMoRF8ivw6MSH2SidlJNaKWQRDBbPWObqwzcu5SqbQ2nc0qvy_iPHzzGTSEXtTsdpEwHZsK-XVg5wrG5WXPLay50IE21bR76s_xPZI6V5zOwCtPB0zsO1dt_31CwW1tHnUBTUeVcqLcQRThxUzJ7EN8RF5YxV3kzDozg50TPRdHrxeLnYTYhJgnzrDA_cjwTO-ePJqauTyNSuJiHExZ2NBhdF3obs4DzRW5c3SHSYZyFjruTBcQqswUfVUnmloN8Z9TvVQ3Wkpvv-Q',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-12 11:43:20,173 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Mon, 12 Aug 2024 16:43:20 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66ba3ba8af7132.54180440; expires=Tue, 12-Aug-2025 16:43:20 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Mon, 19-Aug-2024 16:43:20 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=50; expires=Tue, 12-Aug-2025 16:43:20 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---Pg..',
+ 'expires_in': 3970,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-12 11:43:20,173 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---Pg..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-12 11:43:20,578 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Mon, 12 Aug 2024 16:43:21 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '189', 'etag': '"0"', 'box-request-id': '087207375263ecc81afc5e4f299ec2118', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-12 11:43:20,591 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-12 11:43:20,594 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---Pg..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-12 11:43:20,988 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Mon, 12 Aug 2024 16:43:21 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '271', 'etag': '"0"', 'box-request-id': '0682a8b088645fa2f0961d1fcfff6500c', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-12 11:43:20,996 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-12 11:43:20,996 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-12 11:43:20,996 - __main__ - INFO - Coordinates: x=-9964629.150711054, y=5321433.960770792
+2024-08-12 11:43:22,319 - httpx - INFO - HTTP Request: POST https://services5.arcgis.com/B6eAyJP1nv4ppYnK/arcgis/rest/services/BoxCapturePoint/FeatureServer/0/addFeatures "HTTP/1.1 200 OK"
+2024-08-12 11:43:22,327 - __main__ - INFO - ArcGIS add features response: 200 - {"addResults":[{"objectId":1,"uniqueId":1,"globalId":null,"success":true}]}
+2024-08-12 16:16:41,047 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-12 16:16:41,047 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-12 16:16:41,047 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJkTFRnTHF6NGlteHRxTzFUU1E0WlNIU1NvMGNzSlJsUDlsZTZDWiIsImV4cCI6MTcyMzQ5NzQzMX0.fhT7gCTKAkIxjvP7k9vPEFHC5MAAkyCdudShh1QBMcD5lidPlJnX0Mb0MXql4E1_QNaVnA-pqmJOYkabg2X7mqUs0KT6d5QHZqLlgLEu1LhZWK-XMQGWjZioQHwMzy2oxDOlj3-s9IkHjw_RxszZ0IRy7qmKurWWgt6qj1oBJcmx6fTcbdN1ijYmAzG4wHWhZ0N3TLD7Zmd7ouQjDjNnmzjag1zoBMx2Kc1ZN3CSeHjEifUMUOs2BmhRbFdPlcO8bdO_nRoBpisPfyTLdwtMrBb2yeX4k-aeWpO-RNLUKaHNzH6S-hX-EugBSo28Q1ZhZagLqYRAYOB1qJnEvTbetA',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-12 16:16:41,512 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Mon, 12 Aug 2024 21:16:42 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66ba7bba62d4d0.60179444; expires=Tue, 12-Aug-2025 21:16:42 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=EG-18782; expires=Mon, 19-Aug-2024 21:16:42 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=3; expires=Tue, 12-Aug-2025 21:16:42 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---1Q..',
+ 'expires_in': 4135,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-12 16:16:41,512 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---1Q..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-12 16:16:41,914 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Mon, 12 Aug 2024 21:16:43 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '166', 'etag': '"0"', 'box-request-id': '02594aa1c19266a80afaca80f0f352c99', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-12 16:16:41,963 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-12 16:16:41,964 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---1Q..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-12 16:16:42,280 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Mon, 12 Aug 2024 21:16:43 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '218', 'etag': '"0"', 'box-request-id': '0a60bd5fb33ad83b2406352fb505579ef', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-12 16:16:42,280 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-12 16:16:42,280 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-12 16:16:42,280 - __main__ - INFO - Coordinates: x=-9964629.150711054, y=5321433.960770792
+2024-08-12 16:16:43,395 - httpx - INFO - HTTP Request: POST https://services5.arcgis.com/B6eAyJP1nv4ppYnK/arcgis/rest/services/BoxCapturePoint/FeatureServer/0/addFeatures "HTTP/1.1 200 OK"
+2024-08-12 16:16:43,395 - __main__ - INFO - ArcGIS add features response: 200 - {"addResults":[{"objectId":2,"uniqueId":2,"globalId":null,"success":true}]}
+2024-08-12 16:35:25,027 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-12 16:35:25,029 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-12 16:35:25,031 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJTcVdheFJucWwwNXFxcGpYMHFwSE81elNCOFNUNHBxSGVoamUxcnNBUm50NGFFIiwiZXhwIjoxNzIzNDk4NTU1fQ.WbA7LZd7JTqaHp_ml4tyVeJwlaCwe_RYGLUPsqwNhb7nEPSF07y7w4EH1IQqez2GoM06PoKM_Sv6tbnBbADsUBnR-kjBVxOsMAJsoLuUkwllSaNIOsyhpviNlxAFJuaMXs4-ueFd1WYaSz5KuHnTP680dbsn74-v0n_Up1gHjlBR6LajvJ_z_9R0sKfEFXCupZ5tK2PhHc8m7v1DUuUxHdToTyit6FyXZSR9CLyyNfC_VFGEddF9znmbxRVsbkOiodREZYMqxG_6xwBVf22L3YyPHgle8y3nsZ5WqOaeIvgUieQ4icJEOhnv-ClX7QCaSjYNYCe0-mJqDRKAKP7LZg',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-12 16:35:25,494 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Mon, 12 Aug 2024 21:35:26 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66ba801e63b737.33288392; expires=Tue, 12-Aug-2025 21:35:26 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=SREPROD-4107; expires=Mon, 19-Aug-2024 21:35:26 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=18; expires=Tue, 12-Aug-2025 21:35:26 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---wA..',
+ 'expires_in': 3922,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-12 16:35:25,497 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---wA..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-12 16:35:25,970 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Mon, 12 Aug 2024 21:35:27 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '282', 'etag': '"0"', 'box-request-id': '1262c6b7e538b85a890f70a63bd20e929', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-12 16:35:25,980 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-12 16:35:25,981 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---wA..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-12 16:35:26,261 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Mon, 12 Aug 2024 21:35:27 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '173', 'etag': '"0"', 'box-request-id': '17d2e151e023b03df92a0a659243183d5', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-12 16:35:26,267 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-12 16:35:26,268 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-12 16:35:26,269 - __main__ - INFO - Coordinates: x=-9964629.150711054, y=5321433.960770792
+2024-08-12 16:35:27,321 - httpx - INFO - HTTP Request: POST https://services5.arcgis.com/B6eAyJP1nv4ppYnK/arcgis/rest/services/BoxCapturePoint/FeatureServer/0/addFeatures "HTTP/1.1 200 OK"
+2024-08-12 16:35:27,323 - __main__ - INFO - ArcGIS add features response: 200 - {"addResults":[{"objectId":3,"uniqueId":3,"globalId":null,"success":true}]}
+2024-08-13 11:38:51,142 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJMT1V3QTVROEZDMnVhbko1WEJSajdKWFpqaTU4cFI4ZEJwa0xYNnpITE4xZEhqQllmWkplVTA5REV0bmdBREtpZFFlIiwiZXhwIjoxNzIzNTY3MTYxfQ.kjtC9LI20eROy7ELVCisdZTvnedGgiODnU9Raf0IPiJ75EpJ7cd8ldDiVxpVkUe42B9yT7e_BhXBbZKUtWpsM9R475r4KLJYp0mnVkuaxlv8cLZL97R-SZwaNneWTvTqtgrPhfrP5GgRcsKE_N_3vNOe_yVcDpPGLSanZfd2IB7ABicGeEt2AIsDWv32ONK-3CtGVyXhUlK0-zXIX4mxCgPwwo3-dUfvSZRJgqQkYirOSEERIcI4e94NbuzXnV9CxTDOolyJC10RPAqrIG6vDsVa2_DKNcYBxBfQqPDP_ycuS6CBQKlvU5WM9MkUHn11ddS9dy3caQ6Egoi2T6VB0w',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-13 11:38:51,595 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Tue, 13 Aug 2024 16:38:52 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66bb8c1c299c45.05097714; expires=Wed, 13-Aug-2025 16:38:52 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=PARTNERS-27668; expires=Tue, 20-Aug-2024 16:38:52 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=4; expires=Wed, 13-Aug-2025 16:38:52 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---9Q..',
+ 'expires_in': 4067,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-13 11:38:51,595 - crypto_utils - INFO - Token refreshed. New access token: 1!V5Ae1t1k...
+2024-08-13 11:38:51,595 - config - INFO - Startup event: Token refreshed and client reinitialized
+2024-08-13 11:41:24,251 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiI0QlBpcTJuSVRJUlpIY01oIiwiZXhwIjoxNzIzNTY3MzE0fQ.OuDivSpHlyNC9ffxegBD7UKJo3D5CkwImCg0AoneDnq_pFf6-hSvvOsbq98VS-fiL-YQoyTBOZwsXoXSjeXupUeqfYPkVuwS1jSGIU43lZnAmwR0VwYg5wxuAL8bPM38mC20njAhftrjS-VCSeGhCRmLtm7BpcbcNykN7eVNscFCEhkMxsgs9KdPVX8q--qBnsc27N2GmWHSw6PmgqCdsrSWDVCl4SG_PR9Y8nxmFOb2vDEhmedJGjWP0nGEeNgczAQjvteSqU9uuBzOATTgmOznIK_7SZNw8sDOgmDFsvRPMCK3VGar8Z85CSDFFDafvqwBnjEfAxZoRhfPo3_8ow',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-13 11:41:24,743 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Tue, 13 Aug 2024 16:41:25 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66bb8cb544ef53.46082018; expires=Wed, 13-Aug-2025 16:41:25 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=PARTNERS-27668; expires=Tue, 20-Aug-2024 16:41:25 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=53; expires=Wed, 13-Aug-2025 16:41:25 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---sg..',
+ 'expires_in': 3967,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-13 11:41:24,743 - crypto_utils - INFO - Token refreshed. New access token: 1!91puTj77...
+2024-08-13 11:41:24,743 - config - INFO - Startup event: Token refreshed and client reinitialized
+2024-08-13 11:48:24,846 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJqNzZwRjQ1NW1mdnNnWHQyUkVaVmZZSnBNUVVnVVlBamVEUHJHZkRnNkJVYzdzY3cwVWpnakxPRW14SXFacHFkd0FXTjciLCJleHAiOjE3MjM1Njc3MzR9.etc6ybU9klKo5DfjGpaD04_GWSvUTl4QL-6pDjrzXEnXGy_av41EopiI00bFhZKUVWTtG3XA5dOeERSN54zLJyj2k2D7QZTDTXRbdo1fx_L8EKHqT0-YEnL8AE5iKku54MeYAqCZhwrQNgcOpPxrXEyRp3rj-d-X-kFL7T83VQJF7w2hZteJp76Nq_M8kjyNKGyasgm1OWDTBd7i_Mx_TbhJ4rXPixhgA58YR2z1220237b-XodORcrDHLvjRod10Kwy5iKgK_DTJXniqyqES6dRbXyPVoNGj2JiilD87Th8gtwMg7wkIIUnuPrmeX0flVPEGrpno8I-FfOU4eru7A',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-13 11:48:25,323 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Tue, 13 Aug 2024 16:48:26 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66bb8e59d96684.56978520; expires=Wed, 13-Aug-2025 16:48:25 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=PARTNERS-27668; expires=Tue, 20-Aug-2024 16:48:25 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=77; expires=Wed, 13-Aug-2025 16:48:25 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---Hw..',
+ 'expires_in': 3967,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-13 11:48:25,325 - crypto_utils - INFO - Token refreshed. New access token: 1!STLzPh0W...
+2024-08-13 11:48:25,325 - config - INFO - Startup event: Token refreshed and client reinitialized
+2024-08-13 11:52:04,726 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-13 11:52:04,726 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-13 11:52:04,726 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiJwQ3RrVTlZMWpxZXNuN0tWVHliSVBZMk9OTDVaZmw4eUdRRlRIZmRxM3VNdEZsMnhrdDJzWXFJZTFick5zbjBRU0ZJRTFzakxSIiwiZXhwIjoxNzIzNTY3OTU0fQ.egiclszhi7GPgqrTRTNRzPS5G0tHL0YHw-KuBQnayw_QnDvLey68zeS7AqWYCZCX43uim0K-EBvnMKTdS6O8c7HwVZ9oiNkYlBLKYmZ17SMTRbhA4UuAuUbGd2ojk0fspAePjHYzInEXm_7jcFsfdV3HEfytPUwco3abpDJoQDYwVV47_Khzd1MR9nFYNlcGGfSLIJhNsTvygupwb6KxCSrVgLKFUjvnh_pdTTK9bh-g-3B0MmpTMoAAd19GUBLb5-tmLYragzoz1gYHr9nONDgQdtJgUi1UafqerI0D6QdlIMwWGu5mhLIxu-tE-emUY7fyI-R8-lAYLTC-pOhjGA',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-13 11:52:05,223 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Tue, 13 Aug 2024 16:52:05 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66bb8f35b9dd19.17867017; expires=Wed, 13-Aug-2025 16:52:05 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=PARTNERS-27668; expires=Tue, 20-Aug-2024 16:52:05 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=39; expires=Wed, 13-Aug-2025 16:52:05 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---Dw..',
+ 'expires_in': 3888,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-13 11:52:05,223 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---Dw..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-13 11:52:05,656 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Tue, 13 Aug 2024 16:52:06 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '217', 'etag': '"0"', 'box-request-id': '0d7c6c03376c98072f7547f6d231981bc', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-13 11:52:05,664 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-13 11:52:05,664 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---Dw..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-13 11:52:06,045 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Tue, 13 Aug 2024 16:52:06 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '231', 'etag': '"0"', 'box-request-id': '0b6b2ede94cabce594959271e1ba55aea', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-13 11:52:06,052 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-13 11:52:06,052 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-13 11:52:06,052 - __main__ - INFO - Coordinates: x=-9964629.150711054, y=5321433.960770792
+2024-08-13 11:52:07,377 - httpx - INFO - HTTP Request: POST https://services5.arcgis.com/B6eAyJP1nv4ppYnK/arcgis/rest/services/BoxCapturePoint/FeatureServer/0/addFeatures "HTTP/1.1 200 OK"
+2024-08-13 11:52:07,385 - __main__ - INFO - ArcGIS add features response: 200 - {"addResults":[{"objectId":4,"uniqueId":4,"globalId":null,"success":true}]}
+2024-08-13 12:21:19,453 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-13 12:21:19,462 - __main__ - ERROR - Error handling webhook event: unsupported operand types(s) or combination of types: 'str' and 'NoneType'
+2024-08-13 12:23:01,641 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-13 12:23:01,646 - __main__ - INFO - Processing file ID: 1614233886257
+2024-08-13 12:23:01,646 - boxsdk.network.default_network - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im5lcG1lMno5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJ1anFjNXhmdGdybHMxdzh0NHpmc2szNHgzZWZxbnU1dSIsInN1YiI6IjEyMDAxNTM0ODEiLCJib3hfc3ViX3R5cGUiOiJlbnRlcnByaXNlIiwiYXVkIjoiaHR0cHM6Ly9hcGkuYm94LmNvbS9vYXV0aDIvdG9rZW4iLCJqdGkiOiIyNVZCTzJlNHNPVnNGUGVUUWZVcEx4ZkNqQU9MQ2t2c2FucVpSM3VVcmF6elBha2MwT1hzdVFvNlRyOWxaUHQzcXZVVXhCM1ZpaGIyRjJyVmg1eURFVllqSFp0SHciLCJleHAiOjE3MjM1Njk4MTF9.qnh1cwDkPETMpc4Fb2oWwaOA7Bj3tKSAWF1SaaWPWKoV5CdOattS4zOmCPaW7S4xagh3ecNcGaq8FqygQin5h-Zer9U1Y5FFsBrUBLmB8KstsHWXXtL6DaVal9RK00PXRG5R9hYic2ELnx1fnK5yn8KY94X4dMzbYNG41XZauLDmg28kdd_QMc49rSe2I2fPqluREX83ieXfAfSict8sLrxCFBkwPBxJ1bqdA0xo7Y-Xre8Ny9KMjgAx93zYm8Ah4nTFGg-dz6QUldSKu0THElLAV2p09HgnOU1RYQTnM0sDND-Rg81LlgVRV_GhA7Y30QtB2FF2RWDQUW3PNAzH_Q',
+          'box_device_id': '0',
+          'client_id': '---nu5u',
+          'client_secret': '---fkX0',
+          'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer'},
+ 'headers': {'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4',
+             'content-type': 'application/x-www-form-urlencoded'}}[0m
+2024-08-13 12:23:02,236 - boxsdk.network.default_network - INFO - [32m"POST https://api.box.com/oauth2/token" 200 512
+{'date': 'Tue, 13 Aug 2024 17:23:03 GMT', 'content-type': 'application/json', 'Content-Length': '512', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=66bb9676b22854.69596472; expires=Wed, 13-Aug-2025 17:23:02 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=PARTNERS-27668; expires=Tue, 20-Aug-2024 17:23:02 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=57; expires=Wed, 13-Aug-2025 17:23:02 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---cQ..',
+ 'expires_in': 4112,
+ 'restricted_to': [],
+ 'token_type': 'bearer'}
+[0m
+2024-08-13 12:23:02,236 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---cQ..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': None}[0m
+2024-08-13 12:23:02,631 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257" 200 1191
+{'date': 'Tue, 13 Aug 2024 17:23:03 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '177', 'etag': '"0"', 'box-request-id': '0705e9a8c94c8de5de289749e70b6e778', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-08-06T13:25:28-07:00',
+ 'content_modified_at': '2024-08-06T13:25:28-07:00',
+ 'created_at': '2024-08-06T13:25:30-07:00',
+ 'created_by': {'id': '35196587881',
+                'login': 'hisham.abbas.live@gmail.com',
+                'name': 'Hisham Abbas',
+                'type': 'user'},
+ 'description': '',
+ 'etag': '0',
+ 'file_version': {'id': '1774684451057',
+                  'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+                  'type': 'file_version'},
+ 'id': '1614233886257',
+ 'item_status': 'active',
+ 'modified_at': '2024-08-06T13:25:30-07:00',
+ 'modified_by': {'id': '35196587881',
+                 'login': 'hisham.abbas.live@gmail.com',
+                 'name': 'Hisham Abbas',
+                 'type': 'user'},
+ 'name': '2024-08-06_002.jpg',
+ 'owned_by': {'id': '35196587881',
+              'login': 'hisham.abbas.live@gmail.com',
+              'name': 'Hisham Abbas',
+              'type': 'user'},
+ 'parent': {'etag': '0',
+            'id': '276388475164',
+            'name': 'ArcGIS_integration',
+            'sequence_id': '0',
+            'type': 'folder'},
+ 'path_collection': {'entries': [{'etag': None,
+                                  'id': '0',
+                                  'name': 'All Files',
+                                  'sequence_id': None,
+                                  'type': 'folder'},
+                                 {'etag': '0',
+                                  'id': '276388475164',
+                                  'name': 'ArcGIS_integration',
+                                  'sequence_id': '0',
+                                  'type': 'folder'}],
+                     'total_count': 2},
+ 'purged_at': None,
+ 'sequence_id': '0',
+ 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24',
+ 'shared_link': None,
+ 'size': 3313030,
+ 'trashed_at': None,
+ 'type': 'file'}
+[0m
+2024-08-13 12:23:02,643 - __main__ - INFO - File exists: <Box File - 1614233886257 (2024-08-06_002.jpg)>
+2024-08-13 12:23:02,643 - boxsdk.network.default_network - INFO - [36mGET https://api.box.com/2.0/files/1614233886257 {'headers': {'Authorization': '---cQ..',
+             'User-Agent': 'box-python-sdk-3.11.0',
+             'X-Box-UA': 'agent=box-python-sdk/3.11.0; env=python/3.12.4'},
+ 'params': {'fields': 'id,type,name,metadata.global.boxCaptureV1'}}[0m
+2024-08-13 12:23:02,942 - boxsdk.network.default_network - INFO - [32m"GET https://api.box.com/2.0/files/1614233886257?fields=id%2Ctype%2Cname%2Cmetadata.global.boxCaptureV1" 200 633
+{'date': 'Tue, 13 Aug 2024 17:23:03 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '193', 'etag': '"0"', 'box-request-id': '0b6056ca836f35db0025c55df76a225db', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'etag': '0',
+ 'id': '1614233886257',
+ 'metadata': {'global': {'boxCaptureV1': {'$canEdit': True,
+                                          '$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed',
+                                          '$parent': 'file_1614233886257',
+                                          '$scope': 'global',
+                                          '$template': 'boxCaptureV1',
+                                          '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be',
+                                          '$typeVersion': 6,
+                                          '$version': 0,
+                                          'camera': 'Apple',
+                                          'captureTimestamp': '2024-08-06 '
+                                                              '15:25',
+                                          'colorSpace': '',
+                                          'exposure': 'Mode: Auto, Program: '
+                                                      'Program Normal, Time: '
+                                                      '0.008 sec, FNumber: 1.6',
+                                          'flash': 'Off',
+                                          'lens': 'iPhone 12 back camera 4.2mm '
+                                                  'f/1.6',
+                                          'location': '43.06213333333334 N, '
+                                                      '89.51378666666666 W',
+                                          'resolution': '4032 x 3024'}}},
+ 'name': '2024-08-06_002.jpg',
+ 'type': 'file'}
+[0m
+2024-08-13 12:23:02,942 - __main__ - INFO - Got metadata instance: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-13 12:23:02,942 - __main__ - INFO - Metadata: {'$id': 'f65d8b5a-7a8c-4a0a-9d55-e1a2df4d4fed', '$version': 0, '$type': 'boxCaptureV1-6ee0a197-59b4-41da-8683-7d89c11e62be', '$parent': 'file_1614233886257', '$typeVersion': 6, '$template': 'boxCaptureV1', '$scope': 'global', 'exposure': 'Mode: Auto, Program: Program Normal, Time: 0.008 sec, FNumber: 1.6', 'colorSpace': '', 'location': '43.06213333333334 N, 89.51378666666666 W', 'lens': 'iPhone 12 back camera 4.2mm f/1.6', 'captureTimestamp': '2024-08-06 15:25', 'camera': 'Apple', 'flash': 'Off', 'resolution': '4032 x 3024', '$canEdit': True}
+2024-08-13 12:23:02,950 - __main__ - INFO - Coordinates: x=-9964629.150711054, y=5321433.960770792
+2024-08-13 12:23:03,969 - httpx - INFO - HTTP Request: POST https://services5.arcgis.com/B6eAyJP1nv4ppYnK/arcgis/rest/services/BoxCapturePoint/FeatureServer/0/addFeatures "HTTP/1.1 200 OK"
+2024-08-13 12:23:03,969 - __main__ - INFO - ArcGIS add features response: 200 - {"addResults":[{"objectId":5,"uniqueId":5,"globalId":null,"success":true}]}
+2024-08-13 14:31:25,785 - __main__ - INFO - Received Payload: {'type': 'webhook_event', 'id': '76bd464e-346d-4156-bf7d-569c8c7d351a', 'created_at': '2024-08-06T13:25:30-07:00', 'trigger': 'FILE.UPLOADED', 'webhook': {'id': '2983076408', 'type': 'webhook'}, 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'source': {'id': '1614233886257', 'type': 'file', 'file_version': {'type': 'file_version', 'id': '1774684451057', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24'}, 'sequence_id': '0', 'etag': '0', 'sha1': '55a141276218fb3c2173a9cf59347c80e7694b24', 'name': '2024-08-06_002.jpg', 'description': '', 'size': 3313030, 'path_collection': {'total_count': 2, 'entries': [{'type': 'folder', 'id': '0', 'sequence_id': None, 'etag': None, 'name': 'All Files'}, {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}]}, 'created_at': '2024-08-06T13:25:30-07:00', 'modified_at': '2024-08-06T13:25:30-07:00', 'trashed_at': None, 'purged_at': None, 'content_created_at': '2024-08-06T13:25:28-07:00', 'content_modified_at': '2024-08-06T13:25:28-07:00', 'created_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'modified_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'owned_by': {'type': 'user', 'id': '35196587881', 'name': 'Hisham Abbas', 'login': 'hisham.abbas.live@gmail.com'}, 'shared_link': None, 'parent': {'type': 'folder', 'id': '276388475164', 'sequence_id': '0', 'etag': '0', 'name': 'ArcGIS_integration'}, 'item_status': 'active'}, 'additional_info': []}
+2024-08-13 14:31:25,798 - __main__ - ERROR - Error handling webhook event: unsupported operand types(s) or combination of types: 'str' and 'NoneType'
